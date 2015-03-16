@@ -2,7 +2,7 @@ function printAllActiveStudents2Spreadsheet() {
   var values =[];
   var organization =[];
   var orgArray = [];
-  var pageToken, page,stuID,photoURL;
+  var pageToken,page,stuID,photoURL;
   //Get users from Google Apps
   do {
     page = AdminDirectory.Users.list({
@@ -49,6 +49,6 @@ function printAllActiveStudents2Spreadsheet() {
    ss.getSheets()[0].getRange(3, 1, numRowCol.length, numRowCol[0].length).clear(); //clears all values
    ss.getSheets()[0].getRange(3, 1, values.length, values[0].length).setValues(values).sort(2); // Outputs new values starting on row 3
    
-   // You can use the first two row for AwesomeTables on a restricted google site
+   // You can use the first two rows for AwesomeTables on a restricted google site
 
 }
