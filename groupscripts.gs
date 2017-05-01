@@ -165,7 +165,7 @@ function listAllStudentGroups() {
 function updateOUtoGroups() {
   var spreadsheetUrl = 'https://docs.google.com/a/kcsdschools.org/spreadsheets/d/1RobEH5Q/edit#gid=0'; //Your SS URL 
   var ss = SpreadsheetApp.openByUrl(spreadsheetUrl);
-  var sheet = ss.getSheets()[3];
+  var sheet = ss.getSheets()[0];
   var numRowCol = sheet.getDataRange().getValues();
   var cell, startRow = 1,lastRow;
   var out,status;
