@@ -28,7 +28,7 @@ function listCrOS() {
 function addData2SS(ssURL, sheetName, data){  
     //Add Data to Spreadsheet
     var ss = SpreadsheetApp.openByUrl(ssURL);
-    var numRowCol = ss.getDataRange().getValues();
-    ss.getSheetByName(sheetName).getRange(1, 1, numRowCol.length, numRowCol[0].length).clear();
-    ss.getSheetByName(sheetName).getRange(1, 1, data.length, data[0].length).setValues(data);
+    var numRowCol = ss.getDataRange().getValues(); // gets data from Sheet
+    ss.getSheetByName(sheetName).getRange(1, 1, numRowCol.length, numRowCol[0].length).clear(); // deletes data from Sheet
+    ss.getSheetByName(sheetName).getRange(1, 1, data.length, data[0].length).setValues(data); // sets new data from array
 }
