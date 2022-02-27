@@ -48,7 +48,11 @@ function printAllActiveStudents2Spreadsheet() {
    var numRowCol = ss.getDataRange().getValues();
    ss.getSheets()[0].getRange(3, 1, numRowCol.length, numRowCol[0].length).clear(); //clears all values
    ss.getSheets()[0].getRange(3, 1, values.length, values[0].length).setValues(values).sort(2); // Outputs new values starting on row 3
-   
+
    // You can use the first two rows for AwesomeTables on a restricted google site
 
 }
+
+
+
+
